@@ -1,20 +1,18 @@
 import React from "react"
 import  ReactDOM  from "react-dom"
-import logo from './logo.svg';
+import './style.css'
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+import MainContent from "./components/MainContent" 
 
-
-const page = (
+function Page() {
+    return(
     <div>
-        <img src={logo} width="60px"/>
-        <h1>Fun Facts about React.</h1>
-        <ul>
-            <li>Was originally released in 2013.</li>
-            <li>Was originally created by Jordan Walke.</li>
-            <li>Has well over 100k stars on Github.</li>
-            <li>Is maintained by Facebook.</li>
-            <li>Powers thousands of enterprise apps, including mobile apps.</li>
-        </ul>
+        <Header/>
+        <MainContent/>
+        <Footer/>
     </div>
-)
+    )
+}
 
-ReactDOM.render(page ,document.getElementById("root"))
+ReactDOM.render(<Page/>,document.getElementById("root"));
